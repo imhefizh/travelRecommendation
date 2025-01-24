@@ -1,0 +1,32 @@
+body {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    margin: -8px;
+}
+
+nav {
+    /* overflow: hidden; */
+    border: 1px solid;
+    border-color: black;
+    width: 100vw;
+    height: 4em;
+    z-index: 2;
+}
+
+article {
+    z-index: 2;
+}
+
+.logo {
+    size: 50px;
+}
+
+.bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}

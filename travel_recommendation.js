@@ -1,7 +1,8 @@
 const jsonFile = './travel_recommendation.json'
 fetch(jsonFile)
-    .then(response => {
-        console.log(response)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
     })
     .catch(error => {
         console.log(error)
