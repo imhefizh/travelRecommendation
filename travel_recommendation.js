@@ -56,6 +56,7 @@ const french = new Date().toLocaleTimeString("en-US", options[6]);
 function searching() {
   //   console.log(input.value.toLowerCase());
   //   debugger;
+  clearResult();
   if (
     input.value.toLowerCase() == "beach" ||
     input.value.toLowerCase() == "beaches"
@@ -285,7 +286,6 @@ function searching() {
       "Choose between beach(es), temple(s), or country(es), australia, japan, or brazil"
     );
   }
-  clearResult();
 }
 
 function clearResult() {
