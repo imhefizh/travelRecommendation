@@ -281,8 +281,11 @@ function searching() {
       })
       .catch((error) => console.error("Error:", error));
   } else {
-    alert("Choose between beach(es), temple(s), or country(es)");
+    alert(
+      "Choose between beach(es), temple(s), or country(es), australia, japan, or brazil"
+    );
   }
+  clearResult();
 }
 
 function clearResult() {
