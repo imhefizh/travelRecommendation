@@ -178,6 +178,108 @@ function searching() {
         }
       })
       .catch((error) => console.error("Error:", error));
+  } else if (input.value.toLowerCase() == "australia") {
+    document.getElementById("top-bar").style = "display: block; ";
+    fetch(jsonFile)
+      .then((response) => response.json())
+      .then((data) => {
+        for (let item in data) {
+          if (item == "countries") {
+            for (let j = 0; j < data[item][0]["cities"].length; j++) {
+              const img = document.createElement("img");
+              const name = document.createElement("h2");
+              const description = document.createElement("p");
+              const button = document.createElement("button");
+              // const time = document.createElement("h5");
+              // time.innerHTML = `Time : ${
+              //   data[item][0][j].time == "sydney" ? sydney : melb
+              // }`;
+              button.innerHTML = "Visit";
+              img.src = data[item][0]["cities"][j].imageUrl;
+              name.innerHTML = data[item][0]["cities"][j].name;
+              description.innerHTML = data[item][0]["cities"][j].description;
+              const div = document.createElement("div");
+              div.appendChild(img);
+              div.appendChild(name);
+              div.appendChild(description);
+              div.appendChild(button);
+              // div.appendChild(time);
+              document
+                .getElementById("recommendation-container")
+                .appendChild(div);
+            }
+          }
+        }
+      })
+      .catch((error) => console.error("Error:", error));
+  } else if (input.value.toLowerCase() == "japan") {
+    document.getElementById("top-bar").style = "display: block; ";
+    fetch(jsonFile)
+      .then((response) => response.json())
+      .then((data) => {
+        for (let item in data) {
+          if (item == "countries") {
+            for (let j = 0; j < data[item][1]["cities"].length; j++) {
+              const img = document.createElement("img");
+              const name = document.createElement("h2");
+              const description = document.createElement("p");
+              const button = document.createElement("button");
+              // const time = document.createElement("h5");
+              // time.innerHTML = `Time : ${
+              //   data[item][0][j].time == "sydney" ? sydney : melb
+              // }`;
+              button.innerHTML = "Visit";
+              img.src = data[item][1]["cities"][j].imageUrl;
+              name.innerHTML = data[item][1]["cities"][j].name;
+              description.innerHTML = data[item][1]["cities"][j].description;
+              const div = document.createElement("div");
+              div.appendChild(img);
+              div.appendChild(name);
+              div.appendChild(description);
+              div.appendChild(button);
+              // div.appendChild(time);
+              document
+                .getElementById("recommendation-container")
+                .appendChild(div);
+            }
+          }
+        }
+      })
+      .catch((error) => console.error("Error:", error));
+  } else if (input.value.toLowerCase() == "brazil") {
+    document.getElementById("top-bar").style = "display: block; ";
+    fetch(jsonFile)
+      .then((response) => response.json())
+      .then((data) => {
+        for (let item in data) {
+          if (item == "countries") {
+            for (let j = 0; j < data[item][2]["cities"].length; j++) {
+              const img = document.createElement("img");
+              const name = document.createElement("h2");
+              const description = document.createElement("p");
+              const button = document.createElement("button");
+              // const time = document.createElement("h5");
+              // time.innerHTML = `Time : ${
+              //   data[item][0][j].time == "sydney" ? sydney : melb
+              // }`;
+              button.innerHTML = "Visit";
+              img.src = data[item][2]["cities"][j].imageUrl;
+              name.innerHTML = data[item][2]["cities"][j].name;
+              description.innerHTML = data[item][2]["cities"][j].description;
+              const div = document.createElement("div");
+              div.appendChild(img);
+              div.appendChild(name);
+              div.appendChild(description);
+              div.appendChild(button);
+              // div.appendChild(time);
+              document
+                .getElementById("recommendation-container")
+                .appendChild(div);
+            }
+          }
+        }
+      })
+      .catch((error) => console.error("Error:", error));
   } else {
     alert("Choose between beach(es), temple(s), or country(es)");
   }
